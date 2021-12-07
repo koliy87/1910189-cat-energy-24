@@ -1,10 +1,23 @@
 .adress {
   background-color: #FFFFFF;
   margin: 0;
-  padding-left: 20px;
-  padding-right: 20px;
   &--inner {
     background-color: #F2F2F2;
+  }
+  @media (min-width:@desktop-width) {
+    position: relative;
+  }
+}
+.adress__wrapper {
+  padding: 26px 20px;
+  display: flex;
+  justify-content: space-between;
+  @media (min-width:@desktop-width) {
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 565px;
+    left: 110px;
+    top: 95px;
   }
 }
 .adress__title {
@@ -22,7 +35,11 @@
 }
 .adress__map {
   background-image: url("../img/map.jpg");
-  width: 320px;
+  background-repeat: no-repeat;
+  background-size: 100%;
   min-height: 362px;
   margin-left: -20px;
+  @media (min-width:@desktop-width) {
+    min-height: 400px;
+  }
 }
