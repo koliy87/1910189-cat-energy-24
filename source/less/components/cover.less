@@ -1,28 +1,63 @@
 .cover {
   background-image: linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), url("../img/background-cover.jpg");
-  background-size: 320px 302px;
+  background-size: 100% 302px;
   background-repeat: no-repeat;
+  @media (min-width: @tablet-width) {
+    background-image: none;
+  }
 }
 .cover__wrapper {
   color: #FFFFFF;
   text-align: center;
-  margin-right: 20px;
-  margin-left: 20px;
+  padding: 0 20px;
+  background-image: url(../img/cover-eat.jpg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 200px;
+  background-color: transparent;
+  @media (min-width: @tablet-width) {
+    color: #000000;
+    padding: 0 30px;
+    text-align: left;
+    min-height: 830px;
+  }
+  @media (min-width:@desktop-width) {
+    padding: 0 110px;
+    text-align: left;
+  }
 }
 .cover__title {
-  margin: 0;
+  margin: 0 auto;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  padding-top: 27px;
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 .cover__slogan {
-  margin: 0;
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 29px;
   font-size: 14px;
   line-height: 14px;
+  text-transform: uppercase;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 .cover__button {
+  margin-top: 309px;
   display: block;
   font-size: 14px;
-  line-height: 16px;
-  width: 280px;
+  line-height: 18px;
+  width: 100%;
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+    width: 244px;
+    text-align: center;
+  }
 }
