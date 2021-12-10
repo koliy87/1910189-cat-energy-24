@@ -1,8 +1,8 @@
 .adress {
-  background-color: #FFFFFF;
-  margin: 0;
+  background-color: @white;
+  margin: auto;
   &--inner {
-    background-color: #F2F2F2;
+    background-color: @grey;
   }
   @media (min-width:@desktop-width) {
     position: relative;
@@ -10,11 +10,15 @@
 }
 .adress__wrapper {
   padding: 26px 20px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  @media (min-width:@tablet-width) {
+    padding: 60px 70px 56px;
+  }
   @media (min-width:@desktop-width) {
     position: absolute;
-    background-color: #FFFFFF;
+    background-color: @white;
     width: 565px;
     left: 110px;
     top: 95px;
@@ -36,10 +40,13 @@
 .adress__map {
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 320px;
   min-height: 362px;
-  margin-left: -20px;
+  @media (min-width:@tablet-width) {
+    background-size: 768px;
+  }
   @media (min-width:@desktop-width) {
+    background-size: 1440px;
     min-height: 400px;
   }
 }

@@ -1,3 +1,17 @@
+.contacts__wrapper {
+  padding-top: 35px;
+  padding-bottom: 39px;
+  @media (min-width: @tablet-width) {
+    padding-top: 76px;
+    padding-bottom: 75px;
+  }
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 60px;
+    padding-bottom: 67x;
+  }
+}
 .contacts__title {
   margin: 0;
   font-size: 24px;
@@ -5,6 +19,6 @@
   font-weight: 400;
 }
 .contacts__input {
-  color: #444444;
+  color: @dark-grey;
   text-transform: uppercase;
 }

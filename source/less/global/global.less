@@ -1,21 +1,36 @@
 .page__body {
-  background-color: #FFFFFF;
-  margin: 0;
+  background-color: #E5E5E5;
+  margin: 0 auto;
   font-family: "Oswald",Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
-  color: #000000;
+  color: @black;
+  width: 320px;
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
   @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
+}
+.body__wrapper {
+  background-color: @white;
+  @media (min-width: @desktop-width){
     background-image: linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), url("../img/background-cover.jpg");
     background-size: 694px 720px;
     background-position-x: right;
     background-position-y: top;
     background-repeat: no-repeat;
   }
+  &--inner {
+    @media (min-width: @tablet-width) {
+      background-image: none;
+    }
+  }
 }
 .button {
-  color: #FFFFFF;
-  background-color: #68B738;
+  color: @white;
+  background-color: @green;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;

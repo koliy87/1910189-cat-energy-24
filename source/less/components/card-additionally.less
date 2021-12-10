@@ -1,3 +1,14 @@
+.card-additionally {
+  @media (min-width: @tablet-width) {
+    padding: 26px 38px 28px;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 17px 0;
+    width: 895px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .card-additionally__title {
   margin: 0;
   font-weight: 400;
@@ -10,7 +21,7 @@
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 14px;
-  color: #444444;
+  color: @dark-grey;
   dd{
    margin-inline-start: 0;
   }
@@ -19,4 +30,10 @@
   width: 282px;
   padding-top: 10px;
   padding-bottom: 10px;
+  @media (min-width: @tablet-width) {
+    width: 632px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 244px;
+  }
 }
