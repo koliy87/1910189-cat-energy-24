@@ -11,8 +11,8 @@
 .adress__wrapper {
   padding: 26px 20px;
   box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 50% 50%;
   @media (min-width:@tablet-width) {
     padding: 60px 70px 56px;
   }
@@ -22,6 +22,7 @@
     width: 565px;
     left: 110px;
     top: 95px;
+    padding: 60px 80px 56px;
   }
 }
 .adress__title {
@@ -30,12 +31,27 @@
   font-size: 16px;
   line-height: 20px;
   color: #111111;
+  @media (min-width:@tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 .adress__text {
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-style: normal;
+  color: @dark-grey;
+  @media (min-width:@tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+  @media (max-width:@mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 }
 .adress__map {
   background-image: url("../img/map.jpg");

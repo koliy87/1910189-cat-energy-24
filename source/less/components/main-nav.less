@@ -8,7 +8,6 @@
   left: 0;
   bottom: -197px;
   background-color: @white;
-  visibility: hidden;
   @media (min-width: @tablet-width) {
     visibility: visible;
     background-color: transparent;
@@ -18,7 +17,6 @@
     visibility: visible;
   }
 }
-
 .main-nav__list {
   display: flex;
   flex-direction: column;
@@ -37,10 +35,40 @@
   width: auto;
   padding: 22px 20px 24px;
   text-align: center;
+  border-top: 1px solid #E6E6E6;
+  cursor: pointer;
+  position: relative;
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
+    border: none;
+    padding: 0 13px;
+    :hover {
+      opacity: 0.6;
+    }
+    :active {
+      opacity: 0.3;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    &--current::after {
+      content: "";
+      position: absolute;
+      right: 13px;
+      left: 13px;
+      bottom: -10px;
+      height: 2px;
+      background-color: @green;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    &--current::after {
+      background-color: @white;
+    }
   }
 }
 .main-nav__link {
@@ -50,6 +78,7 @@
   text-transform: uppercase;
   padding: 0;
   margin: 0;
+  position: relative;
   @media (min-width: @desktop-width) {
     color: @white;
   }
@@ -57,7 +86,15 @@
     color: @black;
   }
 }
-.main-nav__toggle {
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__wrapper {
+    visibility: hidden;
+  }
+  .main-nav--open .main-nav__wrapper {
+    visibility: visible;
+  }
+}
+.main-nav--closed .main-nav__toggle {
   width: 24px;
   height: 24px;
   background-image:  url("../img/nav-button.svg");
@@ -65,10 +102,21 @@
   background-position: center;
   background-color: @white;
   border: none;
+  cursor: pointer;
   @media (min-width: @tablet-width) {
     visibility: hidden;
   }
-  @media (min-width: @desktop-width) {
+}
+.main-nav--opened .main-nav__toggle {
+  width: 24px;
+  height: 24px;
+  background-image:  url("../img/closed.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: @white;
+  border: none;
+  cursor: pointer;
+  @media (min-width: @tablet-width) {
     visibility: hidden;
   }
 }

@@ -17,7 +17,7 @@
   background-color: @white;
   @media (min-width: @desktop-width){
     background-image: linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), url("../img/background-cover.jpg");
-    background-size: 694px 720px;
+    background-size: 720px 694px;
     background-position-x: right;
     background-position-y: top;
     background-repeat: no-repeat;
@@ -38,6 +38,12 @@
   padding-top: 7px;
   border: none;
   text-transform: uppercase;
+  &:hover {
+    background-color: #5EAA2F;
+  }
+  &:active {
+     color: rgba(255, 255, 255, 0.3);
+  }
 }
 .visually-hidden {
   position: absolute;
