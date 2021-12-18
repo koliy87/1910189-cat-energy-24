@@ -1,9 +1,32 @@
+.questionnaire {
+  padding-top: 39px;
+  padding-bottom: 19px;
+  @media (min-width: @tablet-width) {
+    padding-top: 66px;
+    padding-bottom: 75px;
+  }
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 60px;
+    padding-bottom: 69x;
+  }
+}
+.questionnaire__data {
+  padding-bottom: 24px;
+  @media (min-width: @tablet-width) {
+    padding-bottom: 72px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+  }
+}
 .questionnaire__text {
   margin: 0;
   font-size: 14px;
   line-height: 18px;
 }
 .questionnaire__input {
-  color: #444444;
+  color: @dark-grey;
   text-transform: uppercase;
 }

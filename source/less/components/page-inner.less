@@ -1,7 +1,22 @@
 .page-inner {
   margin: 0;
-  margin-left: 20px;
-  margin-right: 20px;
+  padding: 27px 20px 32px;
+  @media (min-width: @tablet-width) {
+    padding: 44px 67px 72px 71px;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 44px 110px 82px;
+  }
+}
+.page-inner--catalog {
+  margin: 0;
+  padding: 27px 20px 35px;
+  @media (min-width: @tablet-width) {
+    padding: 44px 30px 0;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 44px 110px 86.4px;
+  }
 }
 .page-inner__title {
   margin: 0;

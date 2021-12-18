@@ -4,10 +4,14 @@
   background-repeat: no-repeat;
   @media (min-width: @tablet-width) {
     background-image: none;
+    width: 768px;
+  }
+  @media (min-width:@desktop-width) {
+    width: 1440px;
   }
 }
 .cover__wrapper {
-  color: #FFFFFF;
+  color: @white;
   text-align: center;
   padding: 0 20px;
   background-image: url(../img/cover-eat.jpg);
@@ -16,7 +20,7 @@
   background-position-y: 200px;
   background-color: transparent;
   @media (min-width: @tablet-width) {
-    color: #000000;
+    color: @black;
     padding: 0 30px;
     text-align: left;
     min-height: 830px;
@@ -54,7 +58,7 @@
   display: block;
   font-size: 14px;
   line-height: 18px;
-  width: 100%;
+  width: 280px;
   @media (min-width: @tablet-width) {
     margin-top: 20px;
     width: 244px;

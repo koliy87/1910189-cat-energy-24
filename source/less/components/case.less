@@ -1,5 +1,17 @@
+.case {
+  @media (min-width: @tablet-width) {
+    padding: 69px 0 76px;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
 .case__wrapper {
   background-image: linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), url("../img/case.jpg");
+  @media (min-width: @tablet-width) {
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
 }
 .case__button {
   background-image: url("../img/present-icon.svg");
@@ -8,7 +20,7 @@
   background-color: transparent;
   border: none;
   width: 280px;
-  color: #FFFFFF;
+  color: @white;
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 16px;

@@ -7,7 +7,7 @@
   position: absolute;
   left: 0;
   bottom: -197px;
-  background-color: #FFFFFF;
+  background-color: @white;
   visibility: hidden;
   @media (min-width: @tablet-width) {
     visibility: visible;
@@ -37,21 +37,24 @@
   width: auto;
   padding: 22px 20px 24px;
   text-align: center;
-  a {
-    display: block;
-    text-decoration: none;
-    color: #000000;
-    text-transform: uppercase;
-    padding: 0;
-    margin: 0;
-    @media (min-width: @desktop-width) {
-      color: #FFFFFF;
-    }
-  }
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
+  }
+}
+.main-nav__link {
+  display: block;
+  text-decoration: none;
+  color: @black;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  @media (min-width: @desktop-width) {
+    color: @white;
+  }
+  &--inner {
+    color: @black;
   }
 }
 .main-nav__toggle {
@@ -60,9 +63,12 @@
   background-image:  url("../img/nav-button.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #FFFFFF;
+  background-color: @white;
   border: none;
   @media (min-width: @tablet-width) {
+    visibility: hidden;
+  }
+  @media (min-width: @desktop-width) {
     visibility: hidden;
   }
 }

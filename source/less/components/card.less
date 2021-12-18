@@ -1,3 +1,20 @@
+
+.card {
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    box-sizing: border-box;
+    background-color: @grey;
+    &--all {
+      @media (min-width: @tablet-width) {
+        background-color: @white;
+        border: 2px solid @grey;
+      }
+    }
+  }
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
+}
 .card__title {
   margin: 0;
   font-weight: 400;
@@ -30,8 +47,14 @@
   width: 280px;
   padding-top: 10px;
   padding-bottom: 10px;
+  @media (min-width: @tablet-width) {
+    width: 248px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 168px;
+  }
   &--all {
-    background-color: #F2F2F2;
-    color:  #444444;
+    background-color: @grey;
+    color: @dark-grey;
   }
 }
