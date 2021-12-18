@@ -3,6 +3,10 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 28px;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    padding-top: 0;
+  }
 }
 .copyright__link {
   font-family: Arial, sans-serif;
@@ -10,4 +14,19 @@
   font-size: 16px;
   line-height: 18px;
   text-decoration: none;
+  &:active {
+    opacity: 0.3;
+  }
+}
+.copyright__logo {
+  fill: #666666;
+  &:hover {
+    fill: @green;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+  @media (min-width: @tablet-width) {
+    margin-left: 22px;
+  }
 }

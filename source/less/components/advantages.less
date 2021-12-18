@@ -1,12 +1,12 @@
 .advantages__wrapper {
   box-sizing: border-box;
   margin: auto;
-  padding: 20px 20px 49px;
+  padding: 0px 20px 49px;
   @media (min-width: @tablet-width) {
-    padding: 45px 30px 0;
+    padding: 15px 30px 47px;
   }
   @media (min-width:@desktop-width) {
-    padding: 71px 110px 0;
+    padding: 0px 110px 69px;
   }
 }
 .advantages__title {
@@ -14,29 +14,61 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+  margin-bottom: 40px;
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 72px;
+  }
 }
 .advantages__list {
   margin: 0;
-  padding-top: 40px;
   padding-inline-start: 0;
   list-style-type: none;
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 334px 334px;
+    column-gap: 40px;
+    row-gap: 134px;
   }
   @media (min-width:@desktop-width) {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 .advantages__item {
   display: flex;
   margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  position: relative;
+  &--useful {
+    background-image: url("../img/useful-icon.svg");
+  }
+  &--powder {
+    background-image: url("../img/powder-icon.svg");
+  }
+  &--eat {
+    background-image: url("../img/eat-icon.svg");
+  }
+  &--time {
+    background-image: url("../img/time-icon.svg");
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
   @media (min-width: @tablet-width) {
     flex-direction: column;
+    background-size: 80px 80px;
+    margin-bottom: 0;
   }
-}
-.advantages__item:last-child {
-  margin-bottom: 0;
+  @media (min-width:@desktop-width) {
+    width: 215px;
+    margin-right: 80px;
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
 }
 .advantages__description {
   margin: 0;
@@ -44,5 +76,29 @@
   font-size: 14px;
   line-height: 18px;
   color: @dark-grey;
-  padding-left: 20px;
+  padding-left: 80px;
+  z-index: 2;
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    padding-top: 111px;
+  }
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 }
+.advantages__number {
+  visibility: hidden;
+  @media (min-width:@desktop-width) {
+    visibility: visible;
+    position: absolute;
+    font-size: 280px;
+    line-height: 1;
+    color: @grey;
+    bottom: -354px;
+    right: 0;
+    z-index: 1;
+  }
+}
+
