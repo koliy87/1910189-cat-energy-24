@@ -1,21 +1,27 @@
 .page-inner {
   margin: 0;
-  padding: 27px 20px 32px;
+  padding: 0;
   @media (min-width: @tablet-width) {
     padding: 44px 67px 72px 71px;
   }
   @media (min-width: @desktop-width) {
     padding: 44px 110px 82px;
   }
-}
-.page-inner--catalog {
-  margin: 0;
-  padding: 27px 20px 35px;
-  @media (min-width: @tablet-width) {
-    padding: 44px 30px 0;
+  &--catalog {
+    @media (min-width: @tablet-width) {
+      padding: 0 30px;
+    }
+    @media (min-width: @desktop-width) {
+      padding: 0 110px;
+    }
   }
-  @media (min-width: @desktop-width) {
-    padding: 44px 110px 86.4px;
+  &--form {
+    @media (min-width: @tablet-width) {
+      padding: 0 65px 0px 69px;
+    }
+    @media (min-width: @desktop-width) {
+      padding: 0 110px;
+    }
   }
 }
 .page-inner__title {
@@ -23,4 +29,23 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+  padding: 27px 20px 41px;
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+    font-size: 60px;
+    line-height: 60px;
+    padding: 46px 0 163px;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 21px 0 165px;
+  }
+  &--form {
+    padding-bottom: 37px;
+    @media (min-width: @tablet-width) {
+      padding-bottom: 54px;
+    }
+    @media (min-width: @desktop-width) {
+      padding-bottom: 56px;
+    }
+  }
 }

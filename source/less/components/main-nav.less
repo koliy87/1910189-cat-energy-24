@@ -8,6 +8,7 @@
   left: 0;
   bottom: -197px;
   background-color: @white;
+  z-index: 1;
   @media (min-width: @tablet-width) {
     visibility: visible;
     background-color: transparent;
@@ -52,8 +53,20 @@
     }
     &:last-child {
       padding-right: 0;
+      &::after {
+        right: 0;
+      }
     }
     &--current::after {
+      content: "";
+      position: absolute;
+      right: 13px;
+      left: 13px;
+      bottom: -10px;
+      height: 2px;
+      background-color: @green;
+    }
+    &--current-inner::after {
       content: "";
       position: absolute;
       right: 13px;

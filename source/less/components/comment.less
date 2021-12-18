@@ -3,6 +3,44 @@
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 158px;
+    height: 2px;
+    right: -20px;
+    background-color: @green;
+    top: 14px;
+  }
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    &::before {
+      width: 478px;
+      right: -65px;
+      top: 22px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 2px;
+      left: -69px;
+      background-color: #68B738;
+      top: 22px;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    &::before {
+      width: 1108px;
+      right: -110px;
+    }
+    &::after {
+      width: 70px;
+      left: -110px;
+    }
+  }
 }
 .comment__field {
   font-family: Oswald;
@@ -12,6 +50,18 @@
   text-align: center;
   color: #444444;
   width: 280px;
+  min-height: 150.5px;
+  box-sizing: border-box;
+  padding: 9px 12px 0 15px;
+  border: 1px solid #E7E7E7;
+  border-radius: 0;
+  @media (min-width: @tablet-width) {
+    min-height: 174px;
+    width: -webkit-fill-available;
+    text-align: left;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 .comment__wrapper {
   padding-top: 37.73px;

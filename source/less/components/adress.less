@@ -13,16 +13,22 @@
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 50% 50%;
+  background-color: @white;
+  &--inner {
+    background-color: @grey;
+  }
   @media (min-width:@tablet-width) {
     padding: 60px 70px 56px;
   }
   @media (min-width:@desktop-width) {
     position: absolute;
-    background-color: @white;
     width: 565px;
     left: 110px;
     top: 95px;
     padding: 60px 80px 56px;
+    &--inner {
+      background-color: @white;
+    }
   }
 }
 .adress__title {

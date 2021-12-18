@@ -1,4 +1,8 @@
 .additionally__wrapper {
+  padding: 0 20px;
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
   @media (min-width: @desktop-width) {
     display: flex;
     align-items: center;
@@ -10,13 +14,58 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
-  padding-bottom: 36px;
+  padding: 25px 20px 36px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 53px;
+    background-color: @green;
+    right: 0;
+    top: 40px;
+  }
   @media (min-width: @tablet-width) {
-    padding-bottom: 80px;
+    padding: 68px 37px 80px;
+    font-size: 36px;
+    line-height: 36px;
+    &::before {
+      width: 328px;
+      right: -30px;
+      top: 90px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      background-color: @green;
+      width: 30px;
+      left: -30px;
+      top: 90px;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    padding: 75px 0 81px;
+    &::before {
+      width: 957px;
+      right: -110px;
+      top: 98px;
+    }
+    &::after {
+      width: 70px;
+      left: -110px;
+      top: 98px;
+    }
   }
 }
 .additionally__list {
   margin: 0;
   padding-inline-start: 0;
   list-style-type: none;
+  @media (min-width: @tablet-width) {
+    border: 1px solid #CDCDCD;
+  }
+  @media (min-width: @desktop-width) {
+    border: none;
+  }
 }

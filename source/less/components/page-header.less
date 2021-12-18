@@ -4,8 +4,14 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  &--inner {
+    border-bottom: 1px solid #D9D9D9;
+  }
   @media (min-width: @tablet-width) {
     padding: 24px 30px 18px;
+    &--inner {
+      border-bottom: none;
+    }
   }
   @media (min-width:@desktop-width) {
     padding: 53px 110px;

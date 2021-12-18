@@ -1,30 +1,49 @@
 .questionnaire {
   padding-top: 39px;
-  padding-bottom: 19px;
+  padding-bottom: 25.4px;
   @media (min-width: @tablet-width) {
     padding-top: 66px;
     padding-bottom: 75px;
   }
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
     padding-bottom: 69x;
   }
 }
 .questionnaire__data {
   padding-bottom: 24px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: #D9D9D9;
+    left: -20px;
+    right: -20px;
+    bottom: 0;
+  }
   @media (min-width: @tablet-width) {
     padding-bottom: 72px;
+    &::after {
+      display: none;
+    }
   }
   @media (min-width: @desktop-width) {
     padding-bottom: 0;
+    flex-grow: 1;
   }
 }
 .questionnaire__text {
   margin: 0;
   font-size: 14px;
   line-height: 18px;
+  text-transform: uppercase;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 .questionnaire__input {
   color: @dark-grey;
