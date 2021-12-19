@@ -1,13 +1,17 @@
 .page-header {
+  width: 320px;
   padding: 10px 20px 17.39px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  margin: 0 auto;
+  box-sizing: border-box;
   &--inner {
     border-bottom: 1px solid #D9D9D9;
   }
   @media (min-width: @tablet-width) {
+    width: 768px;
     padding: 24px 30px 18px;
     &--inner {
       border-bottom: none;
@@ -15,6 +19,7 @@
   }
   @media (min-width:@desktop-width) {
     padding: 53px 110px;
+    width: 1440px;
   }
 }
 .page-header__logo {

@@ -1,12 +1,14 @@
 .advantages__wrapper {
-  box-sizing: border-box;
-  margin: auto;
-  padding: 0px 20px 49px;
+  .mobile;
+  padding-bottom: 49px;
   @media (min-width: @tablet-width) {
-    padding: 15px 30px 47px;
+    .tablet;
+    padding-top: 15px;
+    padding-bottom: 47px;
   }
   @media (min-width:@desktop-width) {
-    padding: 0px 110px 69px;
+    .desktop;
+    padding-bottom: 69px;
   }
 }
 .advantages__title {
@@ -72,7 +74,7 @@
 }
 .advantages__description {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: @Arial;
   font-size: 14px;
   line-height: 18px;
   color: @dark-grey;

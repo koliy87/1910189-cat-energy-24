@@ -1,15 +1,20 @@
 .questionnaire {
-  padding-top: 39px;
-  padding-bottom: 25.4px;
+  width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 20px 25.4px;
   @media (min-width: @tablet-width) {
-    padding-top: 66px;
-    padding-bottom: 75px;
+    width: 768px;
+    padding: 66px 70px 75px;
   }
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    gap: 80px;
-    padding-bottom: 69x;
+    width: 1440px;
+    padding: 0 110px 69px;
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 80px;
+    }
   }
 }
 .questionnaire__data {
@@ -40,6 +45,7 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  margin-bottom: 39px;
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;

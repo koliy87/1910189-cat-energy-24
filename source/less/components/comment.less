@@ -4,6 +4,7 @@
   line-height: 26px;
   font-weight: 400;
   position: relative;
+  margin-bottom: 37.73px;
   &::before {
     position: absolute;
     content: "";
@@ -16,6 +17,7 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 76px;
     &::before {
       width: 478px;
       right: -65px;
@@ -43,7 +45,7 @@
   }
 }
 .comment__field {
-  font-family: Oswald;
+  font-family: @Oswald;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -64,13 +66,14 @@
   }
 }
 .comment__wrapper {
-  padding-top: 37.73px;
+  .mobile;
   padding-bottom: 22.75px;
   @media (min-width: @tablet-width) {
-    padding-top: 76px;
-    padding-bottom: 65px;
+    width: 768px;
+    padding: 0 70px 65px;
   }
   @media (min-width: @desktop-width) {
+    .desktop;
     padding-bottom: 67px;
   }
 }

@@ -1,5 +1,4 @@
 .programs-form {
-  padding: 0 20px 32px;
   @media (min-width: @tablet-width) {
     padding: 0;
     padding-bottom: 72px;
@@ -9,17 +8,22 @@
   }
 }
 .programs-form__wrapper {
+  .mobile;
+  padding-bottom: 32px;
   @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0 70px;
     display: flex;
     gap: 61px;
     align-items: center;
   }
   @media (min-width: @desktop-width) {
+    .desktop;
     gap: 81px;
   }
 }
 .programs-form__button {
-  font-family: "Oswald";
+  font-family: @Oswald;
   width: 280px;
   margin-bottom: 21px;
   @media (min-width: @tablet-width) {
@@ -35,7 +39,7 @@
 }
 .programs-form__legend {
   display: block;
-  font-family: Arial, sans-serif;
+  font-family: @Arial;
   font-size: 14px;
   line-height: 16px;
   text-align: center;

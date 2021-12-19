@@ -1,15 +1,19 @@
 .contacts__wrapper {
-  padding-top: 35px;
+  .mobile;
   padding-bottom: 23.5px;
   @media (min-width: @tablet-width) {
-    padding-top: 76px;
-    padding-bottom: 75px;
+    width: 768px;
+    padding: 0 70px 75px;
   }
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
+   .desktop;
     gap: 78px;
-    padding-bottom: 67x;
+    padding-bottom: 67px;
+    &--inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 78px;
+    }
   }
 }
 .contacts__title {
@@ -18,6 +22,7 @@
   line-height: 26px;
   font-weight: 400;
   position: relative;
+  margin-bottom: 35px;
   &::before {
     position: absolute;
     content: "";
@@ -30,6 +35,7 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 76px;
     &::before {
       width: 145px;
       right: -65px;

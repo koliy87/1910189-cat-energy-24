@@ -1,23 +1,15 @@
 .page__body {
-  background-color: #E5E5E5;
   margin: 0 auto;
-  font-family: "Oswald",Arial, sans-serif;
+  font-family: @Oswald;
   font-size: 16px;
   line-height: 18px;
   color: @black;
-  width: 320px;
-  @media (min-width: @tablet-width) {
-    width: 768px;
-  }
-  @media (min-width: @desktop-width) {
-    width: 1440px;
-  }
 }
 .body__wrapper {
   background-color: @white;
   @media (min-width: @desktop-width){
     background-image: linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), url("../img/background-cover.jpg");
-    background-size: 720px 694px;
+    background-size: 50% 694px;
     background-position-x: right;
     background-position-y: top;
     background-repeat: no-repeat;
