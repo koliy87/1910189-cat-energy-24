@@ -10,25 +10,39 @@
   .mobile;
   color: @white;
   text-align: center;
-  background-image: url(../img/cover-eat.png);
+  background-image: url("../img/cover-eat-mobile.png");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 200px;
   background-color: transparent;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/cover-eat-mobile@2x.png");
+    background-size: 280px auto;
+  }
   @media (min-width: @tablet-width) {
     .tablet;
+    background-image: url("../img/cover-eat-tablet.png");
     background-size: 709px 609px;
     background-position-y: 250px;
     color: @black;
     text-align: left;
     min-height: 859px;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cover-eat-tablet@2x.png");
+      background-size: 709px auto;
+    }
   }
   @media (min-width:@desktop-width) {
     .desktop;
+    background-image: url("../img/cover-eat-desktop.png");
     background-size: 552px 499px;
     background-position-x: 579px;
     background-position-y: 0;
     min-height: 499px;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cover-eat-desktop@2x.png");
+      background-size: 552px auto;
+    }
   }
 }
 .cover__title {
