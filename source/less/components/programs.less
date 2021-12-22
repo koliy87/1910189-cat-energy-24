@@ -1,15 +1,15 @@
 .programs__wrapper {
-  width: 320px;
-  box-sizing: border-box;
-  margin: auto;
-  padding: 20px;
+  .mobile;
+  padding-bottom: 20px;
+  padding-top: 20px;
   @media (min-width: @tablet-width) {
-    width: 768px;
-    padding: 30px;
+    .tablet;
+    padding-bottom: 30px;
+    padding-top: 30px;
   }
   @media (min-width:@desktop-width) {
-    width: 1440px;
-    padding: 82px 110px 0;
+    .desktop;
+    padding-top: 82px;
   }
 }
 .programs__list {
@@ -101,7 +101,7 @@
   position: relative;
   margin: 0;
   margin-bottom: 42px;
-  font-family: Arial, sans-serif;
+  font-family: @Arial;
   font-size: 14px;
   line-height: 18px;
   &::after {

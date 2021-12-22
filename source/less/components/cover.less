@@ -4,34 +4,30 @@
   background-repeat: no-repeat;
   @media (min-width: @tablet-width) {
     background-image: none;
-    width: 768px;
-  }
-  @media (min-width:@desktop-width) {
-    width: 1440px;
   }
 }
 .cover__wrapper {
+  .mobile;
   color: @white;
   text-align: center;
-  padding: 0 20px;
   background-image: url(../img/cover-eat.png);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 200px;
   background-color: transparent;
   @media (min-width: @tablet-width) {
+    .tablet;
     background-size: 709px 609px;
     background-position-y: 250px;
     color: @black;
-    padding: 0 30px;
     text-align: left;
     min-height: 859px;
   }
   @media (min-width:@desktop-width) {
+    .desktop;
     background-size: 552px 499px;
     background-position-x: 579px;
     background-position-y: 0;
-    padding: 0 110px;
     min-height: 499px;
   }
 }

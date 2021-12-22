@@ -1,13 +1,56 @@
 
 .card {
+  width: 280px;
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: 28px 84px 28px 73px 68px;
+  grid-template-rows: 19px 41px 14px 48px 22px 40px 25px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: #EBEBEB;
+    left: -20px;
+    right: -20px;
+  }
+  &--all {
+    display: block;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      background-color: #EBEBEB;
+      left: -20px;
+      right: -20px;
+      top: 0;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1px;
+      background-color: #EBEBEB;
+      left: -20px;
+      right: -20px;
+      bottom: 0;
+    }
+  }
   @media (min-width: @tablet-width) {
     width: 324px;
-    box-sizing: border-box;
     background-color: @grey;
+    display: block;
+    padding: 0 38px 39px;
+    &::after {
+      display: none;
+    }
     &--all {
       @media (min-width: @tablet-width) {
         background-color: @white;
         border: 2px solid @grey;
+        &::before {
+          display: none;
+        }
       }
     }
   }
@@ -21,32 +64,155 @@
   font-size: 16px;
   line-height: 20px;
   color: #222222;
+  grid-column: 4/5;
+  grid-row: 2/3;
+  text-transform: uppercase;
   &--all {
     text-align: center;
+    padding-top: 78px;
+    margin-bottom: 8px;position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 30px;
+      background-color: #D3D3D3;
+      top: 39px;
+      left: 125px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 30px;
+      background-color: #D3D3D3;
+      top: 39px;
+      left: 125px;
+      transform: rotate(90deg);
+    }
+    @media (min-width: @tablet-width) {
+      margin-bottom: 23px;
+      &::after {
+        width: 60px;
+        left: 48px;
+        top: 82px;
+      }
+      &::before {
+        width: 60px;
+        left: 48px;
+        top: 82px;
+      }
+    }
+  }
+  @media (min-width: @tablet-width) {
+    width: 154px;
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 161px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 21px;
+  }
+}
+.card__img {
+  grid-column: 2/3;
+  grid-row: 2/5;
+  align-self: center;
+  justify-self: center;
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    background-color: transparent;
+    &--small {
+      width: 161px;
+      height: 172px;
+      right: 81px;
+      top: -45px;
+    }
+    &--big {
+      width: 168px;
+      height: 200px;
+      right: 78px;
+      top: -73px;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    &--small {
+      right: 41px;
+    }
+    &--big {
+      right: 34px;
+    }
   }
 }
 .card__text {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: @Arial;
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+
+  &--all {
+    margin-bottom: 21px;
+    color: @dark-grey;
+  }
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    width: 167px;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 87px;
+  }
 }
 .card__list {
   margin: 0;
+  grid-column: 4/6;
+  grid-row: 4/5;
+  width: -webkit-fill-available;
 }
 .card__item {
+  display: flex;
+  justify-content: space-between;
   dd {
     margin-inline-start: 0;
   }
-  font-family: Arial, sans-serif;
+  font-family: @Arial;
   font-size: 12px;
   line-height: 16px;
+  color: @dark-grey;
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 16px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      bottom: -7.5px;
+      left: 0;
+      right: 0;
+      background-color: #CDCDCD;
+    }
+    &:last-child {
+      margin-bottom: 42px;
+    }
+  }
 }
 .card__button {
   width: 280px;
   padding-top: 10px;
   padding-bottom: 10px;
+  grid-column: 1/-1;
+  grid-row: 6/7;
+  &--all {
+    margin-bottom: 25px;
+  }
+  &:hover {
+    background-color: #EBEBEB;
+  }
+  &:active {
+    color: rgba(68, 68, 68, 0.3)
+  }
   @media (min-width: @tablet-width) {
     width: 248px;
   }

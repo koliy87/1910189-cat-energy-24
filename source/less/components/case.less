@@ -1,6 +1,8 @@
 .case {
+  margin: 35px 0;
   @media (min-width: @tablet-width) {
     padding: 69px 0 76px;
+    margin: 0;
   }
   @media (min-width: @desktop-width) {
     padding: 0;
@@ -12,6 +14,9 @@
     background-repeat: no-repeat;
     background-size: auto;
   }
+  @media (min-width: @desktop-width) {
+    background-size: 245px cover;
+  }
 }
 .case__button {
   background-image: url("../img/present-icon.svg");
@@ -19,9 +24,8 @@
   background-position:center 59px;
   background-color: transparent;
   border: none;
-  width: 280px;
   color: @white;
-  font-family: Arial, sans-serif;
+  font-family: @Arial;
   font-size: 16px;
   line-height: 16px;
   text-align: center;
@@ -29,4 +33,14 @@
   padding-right: 61px;
   padding-bottom: 43px;
   padding-top: 186px;
+  @media (min-width: @tablet-width) {
+    padding: 71px 124px 69px 422px;
+    text-align: left;
+    background-position-x: 77px;
+    line-height: 20px;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 184.73px 43px 42.12px 41px;
+    text-align: center;
+  }
 }

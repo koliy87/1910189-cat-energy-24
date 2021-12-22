@@ -2,14 +2,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 28px;
+  padding: 28px 20px;
+  width: 320px;
+  margin: 0 auto;
   @media (min-width: @tablet-width) {
     display: flex;
-    padding-top: 0;
+    padding: 0;
+    width: auto;
+    margin: 0;
+
   }
 }
 .copyright__link {
-  font-family: Arial, sans-serif;
+  font-family: @Arial;
   color: #444444;
   font-size: 16px;
   line-height: 18px;

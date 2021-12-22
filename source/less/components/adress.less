@@ -9,20 +9,28 @@
   }
 }
 .adress__wrapper {
-  padding: 26px 20px;
-  box-sizing: border-box;
+  .mobile;
+  padding-top: 26px;
+  padding-bottom: 26px;
   display: grid;
   grid-template-columns: 50% 50%;
+  background-color: @white;
+  &--inner {
+    background-color: @grey;
+  }
   @media (min-width:@tablet-width) {
+    width: 768px;
     padding: 60px 70px 56px;
   }
   @media (min-width:@desktop-width) {
     position: absolute;
-    background-color: @white;
     width: 565px;
     left: 110px;
     top: 95px;
     padding: 60px 80px 56px;
+    &--inner {
+      background-color: @white;
+    }
   }
 }
 .adress__title {
@@ -37,7 +45,7 @@
   }
 }
 .adress__text {
-  font-family: Arial, sans-serif;
+  font-family: @Arial;
   font-size: 14px;
   line-height: 20px;
   font-style: normal;
@@ -56,13 +64,9 @@
 .adress__map {
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
-  background-size: 320px;
+  background-size: cover;
   min-height: 362px;
-  @media (min-width:@tablet-width) {
-    background-size: 768px;
-  }
   @media (min-width:@desktop-width) {
-    background-size: 1440px;
     min-height: 400px;
   }
 }
