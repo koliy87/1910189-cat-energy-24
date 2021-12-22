@@ -92,15 +92,18 @@
 }
 .advantages__number {
   visibility: hidden;
-  @media (min-width:@desktop-width) {
+  @media (min-width:@tablet-width) {
     visibility: visible;
     position: absolute;
     font-size: 280px;
     line-height: 1;
     color: @grey;
     bottom: -354px;
-    right: 0;
+    right: 109px;
     z-index: 1;
+  }
+  @media (min-width:@desktop-width) {
+    right: 0;
   }
 }
 
