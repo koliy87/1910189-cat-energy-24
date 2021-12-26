@@ -8,11 +8,14 @@
 .body__wrapper {
   background-color: @white;
   @media (min-width: @desktop-width){
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), url("../img/background-cover.jpg");
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), url("../img/background-desktop.jpg");
     background-size: 50% 694px;
     background-position-x: right;
     background-position-y: top;
     background-repeat: no-repeat;
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), url("../img/background-desktop@2x.jpg");
+    }
   }
   &--inner {
     @media (min-width: @tablet-width) {

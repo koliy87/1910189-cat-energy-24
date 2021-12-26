@@ -1,7 +1,9 @@
 .additionally__wrapper {
   .mobile;
+  padding-top: 25px;
   @media (min-width: @tablet-width) {
     .tablet;
+    padding-top: 68px;
   }
   @media (min-width: @desktop-width) {
     .desktop;
@@ -15,11 +17,12 @@
   }
 }
 .additionally__title {
+  margin: 0;
   width: auto;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
-  margin: 25px 0 36px;
+  margin-bottom: 36px;
   position: relative;
   &::before {
     position: absolute;
@@ -31,7 +34,7 @@
     top: 15px;
   }
   @media (min-width: @tablet-width) {
-    margin: 68px 37px 80px;
+    margin: 0 37px 80px;
     font-size: 36px;
     line-height: 36px;
     &::before {
