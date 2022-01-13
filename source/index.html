@@ -12,14 +12,14 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body class="page__body">
-  <div class="body__wrapper">
+<body class="page-body">
+  <div class="page-body__wrapper">
     <header class="page-header">
       <a class="page-header__logo">
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="202">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="174">
-          <img src="img/logo-litle.svg" width="34" height="38" alt="Логотип Cat Energy">
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-litle.svg" alt="Логотип Cat Energy">
         </picture>
       </a>
       <a class="page-header__logo--name">
@@ -44,15 +44,15 @@
         </div>
       </nav>
     </header>
-    <main class="page__main">
+    <main class="page-main">
       <section class="cover">
         <div class="cover__wrapper">
           <h1 class="cover__title">Функциональное <br> питание для котов</h1>
           <p class="cover__slogan">Занялся собой?Займись котом!</p>
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/cover-eat-desktop.png 1x, img/cover-eat-desktop@2x.png 2x" width="552">
-            <source media="(min-width: 768px)" srcset="img/cover-eat-tablet.png 1x, img/cover-eat-tablet@2x.png 2x" width="709">
-            <img class="cover__img" src="img/cover-eat-mobile.png" srcset="img/cover-eat-mobile@2x.png" width="280" height="270" alt="Изображение упаковки еды">
+            <source media="(min-width: 1440px)" srcset="img/cover-eat-desktop.png 1x, img/cover-eat-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/cover-eat-tablet.png 1x, img/cover-eat-tablet@2x.png 2x">
+            <img class="cover__img" src="img/cover-eat-mobile.png" srcset="img/cover-eat-mobile@2x.png" alt="Изображение упаковки еды">
           </picture>
           <a class="button cover__button" href="form.html">Подобрать программу</a>
         </div>
@@ -62,13 +62,13 @@
           <h2 class="visually-hidden">Виды программ</h2>
           <ul class="programs__list">
             <li class="programs__item programs__item--slim">
-              <h3 class="programs__title">Похудение</h2>
+              <h3 class="programs__title">Похудение</h3>
                 <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по
                   деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
                 <a class="programs__button" href="catalog.html">Каталог Slim</a>
             </li>
             <li class="programs__item programs__item--muscular">
-              <h3 class="programs__title">Набор массы</h2>
+              <h3 class="programs__title">Набор массы</h3>
                 <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat
                   Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
                 <a class="programs__button" href="catalog.html">Каталог Pro</a>
@@ -81,7 +81,7 @@
           <h2 class="advantages__title">Как это работает</h2>
           <ul class="advantages__list">
             <li class="advantages__item  advantages__item--useful">
-              <p class="advantages__description">Функциональное питание<br> содержит только полезные <br> питательные
+              <p class="advantages__description">Функциональное питание<br>содержит только полезные <br> питательные
                 вещества.</p>
               <p class="advantages__number">1</p>
             </li>
@@ -96,7 +96,7 @@
               <p class="advantages__number">3</p>
             </li>
             <li class="advantages__item advantages__item--time">
-              <p class="advantages__description">Уже через месяц наслаждайтесь<br> изменениями к лучшему<br> вашего
+              <p class="advantages__description">Уже через месяц наслаждайтесь изменениями<br> к лучшему вашего
                 питомца!</p>
               <p class="advantages__number">4</p>
             </li>
@@ -105,7 +105,7 @@
       </section>
       <section class="example">
         <div class="example__wrapper">
-          <div class="example__wrapper--inner">
+          <div class="example__wrapper-inner">
             <h2 class="example__title">Живой пример</h2>
             <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
               Slim.
@@ -129,25 +129,21 @@
             </div>
           </div>
           <section class="example__img slider">
+            <h2 class="visually-hidden">Пример изображений до и после</h2>
             <ul class="slider__list">
               <li class="slider__item">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/before-cat-tablet.png 1x, img/before-cat-tablet@2x.png 2x">
-                  <img src="img/before-cat-mobile.png" srcset="img/before-cat-mobile@2x.png 2x" alt="Кот до начала программы">
+                  <img class="slider__img slider__img--before" src="img/before-cat-mobile.png" srcset="img/before-cat-mobile@2x.png 2x" alt="Кот до начала программы">
                 </picture>
               </li>
               <li class="slider__item">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/after-cat-tablet.png 1x, img/after-cat-tablet@2x.png 2x">
-                  <img src="" width="" height="" alt="Кот после завершения программы">
+                  <img class="slider__img slider__img--after" src="img/after-cat-mobile.png" srcset="img/after-cat-mobile@2x.png 2x" alt="Кот после завершения программы">
                 </picture>
               </li>
             </ul>
-            <!-- Думаю, что это не подойдет для решения вопроса с перекрутко
-            <p class="example-img__toggles slider__toggles">
-            <button class="slider__toggle slider__toggle--current" type="button">Было</button>
-            <button class="slider__toggle" type="button">Стало</button>
-            </p>-->
             <div class="slider__range range">
               <p class="range__text">Было</p>
               <div class="range__scale">
@@ -164,7 +160,7 @@
         <div class="adress__wrapper">
           <h2 class="adress__title">Приглашаем<br> к сотрудничеству<br> дилеров!</h2>
           <address class="adress__text">ул. Большая<br> Конюшенная, д. 19/8<br>
-            <br>
+            <p></p>
             Санкт-Петербург
           </address>
         </div>
@@ -184,7 +180,7 @@
               <li class="social__item">
                 <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
                   <svg class="social__icon" width="23" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <use href="img/sprite.svg#Vk"></use>
+                    <use href="img/sprite.svg#vk"></use>
                   </svg>
                   <span class="visually-hidden">Мы в Вконтакте</span>
                 </a>
@@ -200,9 +196,7 @@
               <li class="social__item">
                 <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
                   <svg class="social__icon--facebook" width="13" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M11.5.83H8.75c-1.22 0-2.38.48-3.24 1.32a4.45 4.45 0 0 0-1.34 3.18v2.7H1.42v3.59h2.75v7.19h3.66v-7.2h2.75l.92-3.59H7.83v-2.7a.9.9 0 0 1 .92-.89h2.75V.83Z"
-                      stroke="#666" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" />
+                    <use href="img/sprite.svg#facebook"></use>
                   </svg>
                   <span class="visually-hidden">Мы в Фейсбук</span>
                 </a>

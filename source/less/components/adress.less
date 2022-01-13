@@ -10,8 +10,8 @@
 }
 .adress__wrapper {
   .mobile;
-  padding-top: 26px;
-  padding-bottom: 26px;
+  padding-top: 30px;
+  padding-bottom: 27px;
   display: grid;
   grid-template-columns: 50% 50%;
   background-color: @white;
@@ -40,6 +40,7 @@
   font-size: 16px;
   line-height: 20px;
   color: #111111;
+  text-transform: uppercase;
   @media (min-width:@tablet-width) {
     font-size: 20px;
     line-height: 26px;
@@ -51,15 +52,16 @@
   line-height: 20px;
   font-style: normal;
   color: @dark-grey;
+    p {
+      display: none;
+    }
   @media (min-width:@tablet-width) {
     font-size: 16px;
     line-height: 20px;
     text-align: right;
   }
   @media (max-width:@mobile-width-only) {
-    br {
-      display: none;
-    }
+
   }
 }
 .adress__map {

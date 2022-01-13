@@ -1,6 +1,15 @@
 .slider {
+  padding-bottom: 40px;
   @media (min-width: @tablet-width) {
     background-color: @grey;
+    min-height: 462px;
+    margin-top: 153px;
+    position: relative;
+    display: flex;
+  }
+  @media (min-width: @desktop-width) {
+    min-height: 0;
+    padding-bottom: 75px;
   }
 }
 .slider__list {
@@ -10,6 +19,13 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: center;
+    position: absolute;
+    top: -170px;
+    right: 0;
+    left: 0;
+  }
+  @media (min-width: @desktop-width) {
+    top: -335px;
   }
 }
 .slider__item {
@@ -20,5 +36,15 @@
   justify-content: center;
   @media (min-width: @tablet-width) {
     background-color: @grey;
+  }
+}
+.slider__img {
+  &--after {
+    display: none;
+  }
+  @media (min-width: @tablet-width) {
+    &--after {
+      display: inline;
+    }
   }
 }

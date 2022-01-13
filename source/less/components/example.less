@@ -9,6 +9,7 @@
     margin-top: 205px;
     position: relative;
     background-color: @grey;
+    min-height: 462px;
   }
 }
 .example__wrapper {
@@ -18,12 +19,13 @@
     width: 1440px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 462px;
   }
 }
-.example__wrapper--inner {
+.example__wrapper-inner {
   width: 320px;
   margin: 0 auto;
-  padding: 25px 20px 40px;
+  padding: 32px 20px 40px;
   box-sizing: border-box;
   @media (min-width: @tablet-width) {
     padding: 43px 30px 72px;
@@ -105,6 +107,7 @@
   padding-bottom: 17.53px;
   border: 1px solid #CDCDCD;
   border-radius: 3px;
+  text-transform: uppercase;
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 37px;

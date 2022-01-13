@@ -18,7 +18,7 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
@@ -42,12 +42,13 @@
 }
 .advantages__item {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   background-repeat: no-repeat;
   background-size: 60px 60px;
   position: relative;
   &--useful {
     background-image: url("../img/useful-icon.svg");
+    min-height: 60px;
   }
   &--powder {
     background-image: url("../img/powder-icon.svg");
@@ -88,12 +89,12 @@
   }
   @media (max-width: @mobile-width-only) {
     br {
-      display: none;
+      display: non;
     }
   }
 }
 .advantages__number {
-  visibility: hidden;
+  display: none;
   @media (min-width:@tablet-width) {
     visibility: visible;
     position: absolute;

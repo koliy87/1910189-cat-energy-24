@@ -10,10 +10,11 @@ import squoosh from 'gulp-libsquoosh';
 import del from 'del';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
+import htmlmin from 'gulp-htmlmin';
 
 // Styles
 
-export const styles = () => {
+const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
@@ -56,7 +57,7 @@ const svg = () => {
     .pipe(gulp.dest('build/img'))
 }
 
-export const sprite = () => {
+const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
     .pipe(svgo())
     .pipe(svgstore({
@@ -66,13 +67,21 @@ export const sprite = () => {
     .pipe(gulp.dest('build/img'));
 }
 
+//Html
+
+const html = () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlmin({
+      collapseWhitespace: true}))
+    .pipe(gulp.dest('build'));
+}
+
 // Copy
 
-export const copy = (done) => {
+const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff,woff2}',
-    'source/*.ico',
-    'source/*.html'
+    'source/*.ico'
   ], {
     base: 'source'
   })
@@ -82,7 +91,7 @@ export const copy = (done) => {
 
 //Clean
 
-export const clean = () => {
+const clean = () => {
   return del('build');
 };
 
@@ -96,6 +105,7 @@ const server = (done) => {
     cors: true,
     notify: false,
     ui: false,
+    browser: "google chrome",
   });
   done();
 }
@@ -111,7 +121,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html,reload));
 }
 
 //Build
@@ -136,6 +146,7 @@ export default gulp.series(
   copyImages,
   gulp.parallel(
     styles,
+    html,
     createWebP,
     svg,
     sprite
