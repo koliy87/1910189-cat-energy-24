@@ -1,36 +1,45 @@
 .case {
   margin: 35px 0;
+  margin-bottom: 40px;
+
   @media (min-width: @tablet-width) {
-    padding: 69px 0 76px;
+    padding: 69px 0 94px;
     margin: 0;
   }
+
   @media (min-width: @desktop-width) {
     padding: 0;
   }
 }
+
 .case__wrapper {
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), url("../img/case.jpg");
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url(" ../img/case.jpg");
+
   @media (min-width: @tablet-width) {
     background-repeat: no-repeat;
     background-size: auto;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), url("../img/case-tablet.jpg");
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/case-tablet.jpg");
+
     @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), url("../img/case-tablet@2x.jpg");
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/case-tablet@2x.jpg");
       background-size: 707px;
     }
   }
+
   @media (min-width: @desktop-width) {
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), url("../img/case-desktop.jpg");
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/case-desktop.jpg");
+
     @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), url("../img/case-desktop@2x.jpg");
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/case-desktop@2x.jpg");
       background-size: 245px;
     }
   }
 }
+
 .case__button {
   background-image: url("../img/present-icon.svg");
   background-repeat: no-repeat;
-  background-position:center 59px;
+  background-position: center 59px;
   background-color: transparent;
   border: none;
   color: @white;
@@ -41,15 +50,18 @@
   padding-left: 58px;
   padding-right: 61px;
   padding-bottom: 37px;
-  padding-top: 186px;
+  padding-top: 194px;
+
   @media (min-width: @tablet-width) {
     padding: 71px 124px 47px 422px;
     text-align: left;
     background-position-x: 77px;
     line-height: 20px;
   }
+
   @media (min-width: @desktop-width) {
     padding: 184.73px 43px 20px 41px;
     text-align: center;
+    background-position-x: 86px;
   }
 }

@@ -1,13 +1,16 @@
 .adress {
   background-color: @white;
   margin: auto;
+
   &--inner {
     background-color: @grey;
   }
-  @media (min-width:@desktop-width) {
+
+  @media (min-width: @desktop-width) {
     position: relative;
   }
 }
+
 .adress__wrapper {
   .mobile;
   padding-top: 30px;
@@ -15,25 +18,30 @@
   display: grid;
   grid-template-columns: 50% 50%;
   background-color: @white;
+
   &--inner {
     background-color: @grey;
   }
-  @media (min-width:@tablet-width) {
+
+  @media (min-width: @tablet-width) {
     width: 768px;
     padding: 60px 70px 56px;
   }
-  @media (min-width:@desktop-width) {
+
+  @media (min-width: @desktop-width) {
     position: absolute;
     width: 565px;
     left: 110px;
     top: 95px;
-    padding: 60px 80px 56px;
+    padding: 60px 71px 56px;
     z-index: 2;
+
     &--inner {
       background-color: @white;
     }
   }
 }
+
 .adress__title {
   margin: 0;
   font-weight: 400;
@@ -41,29 +49,44 @@
   line-height: 20px;
   color: #111111;
   text-transform: uppercase;
-  @media (min-width:@tablet-width) {
+
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 26px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 12px;
+  }
 }
+
 .adress__text {
   font-family: @Arial;
   font-size: 14px;
   line-height: 20px;
   font-style: normal;
   color: @dark-grey;
-    p {
-      display: none;
-    }
-  @media (min-width:@tablet-width) {
+
+  p {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
     text-align: right;
-  }
-  @media (max-width:@mobile-width-only) {
 
+    p {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 51px;
+    text-align: left;
   }
 }
+
 .adress__map {
   background-image: url("../img/location-mobile.jpg");
   background-repeat: no-repeat;
@@ -71,18 +94,23 @@
   min-height: 362px;
   position: relative;
   background-size: cover;
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/location-mobile@2x.jpg");
-    }
-  @media (min-width:@tablet-width) {
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/location-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
     background-image: url("../img/location-tablet.jpg");
     min-height: 400px;
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/location-tablet@2x.jpg");
     }
   }
-  @media (min-width:@desktop-width) {
+
+  @media (min-width: @desktop-width) {
     background-image: url("../img/location-desktop.jpg");
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/location-desktop@2x.jpg");
       background-size: 1440px;

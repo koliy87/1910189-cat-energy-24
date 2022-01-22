@@ -1,25 +1,30 @@
 .catalog__wrapper {
   .mobile;
+
   @media (min-width: @tablet-width) {
     .tablet;
   }
+
   @media (min-width: @desktop-width) {
     .desktop;
   }
 }
+
 .catalog__list {
   margin: 0;
   padding-inline-start: 0;
   list-style-type: none;
   box-sizing: border-box;
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 324px 324px;
     column-gap: 60px;
     row-gap: 141px;
   }
+
   @media (min-width: @desktop-width) {
-    grid-template-columns: 245px 245px 245px 245px ;
+    grid-template-columns: 245px 245px 245px 245px;
     column-gap: 80px;
     row-gap: 143px;
   }

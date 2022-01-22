@@ -3,51 +3,58 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
+
   &:last-child {
     margin-bottom: 0;
   }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
   }
-  @media (min-width: @desktop-width) {
+}
 
-  }
-}
 .input__label {
-  padding-right: 12px;
+  padding-right: 15px;
 }
+
 .input__field {
-  padding-top: 13.5px ;
+  padding-top: 13.5px;
   padding-bottom: 13.5px;
   padding-left: 16px;
   font-size: 16px;
   line-height: 18px;
   flex-grow: 1;
-  border: 1px solid #E7E7E7;
+  border: 1px solid #e7e7e7;
   font-family: @Oswald;
   font-weight: 400;
   color: @dark-grey;
   outline: none;
   position: relative;
+
   &:hover {
-    border: 1px solid #CDCDCD;
+    border: 1px solid #cdcdcd;
   }
+
   &:focus {
     outline: 2px solid #444444;
   }
+
   &:disabled {
-    border: 2px solid #FF8282;
+    border: 2px solid #ff8282;
   }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
   }
 }
+
 .input__envelope {
   position: absolute;
   right: 15px;
 }
+
 .input__phone {
   position: absolute;
   right: 15px;

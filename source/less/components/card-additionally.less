@@ -1,15 +1,17 @@
 .card-additionally {
   padding: 13px 0 19px;
   position: relative;
+
   &::after {
     position: absolute;
     content: "";
     height: 1px;
     left: 0;
     right: 0;
-    background-color: #CDCDCD;
+    background-color: #cdcdcd;
     bottom: 0;
   }
+
   &:first-child {
     &::before {
       position: absolute;
@@ -17,16 +19,18 @@
       height: 1px;
       left: 0;
       right: 0;
-      background-color: #CDCDCD;
+      background-color: #cdcdcd;
       top: 0;
     }
   }
+
   @media (min-width: @tablet-width) {
     padding: 26px 38px 28px;
     display: grid;
     grid-template-columns: 163px 244px 225px;
     grid-template-rows: 20px 25px 40px;
   }
+
   @media (min-width: @desktop-width) {
     padding: 15px 0 17px;
     width: 895px;
@@ -34,6 +38,15 @@
     grid-template-rows: 40px;
   }
 }
+
+.card-additionally__price {
+  margin: 0;
+}
+
+.card-additionally__volume {
+  margin: 0;
+}
+
 .card-additionally__title {
   margin: 0;
   font-weight: 400;
@@ -42,17 +55,20 @@
   color: #222222;
   text-transform: uppercase;
   margin-bottom: 13px;
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
     grid-column: 1/2;
     grid-row: 1/2;
   }
+
   @media (min-width: @desktop-width) {
     margin: 0;
     align-self: center;
   }
 }
+
 .card-additionally__list {
   margin: 0;
   font-family: @Arial;
@@ -62,29 +78,41 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
+
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
     grid-column: 3/4;
     grid-row: 1/2;
-   }
-  dd{
-   margin-inline-start: 0;
+    margin: 0;
+    justify-content: end;
+    gap: 48px;
   }
+
+  dd {
+    margin-inline-start: 0;
+  }
+
   @media (min-width: @desktop-width) {
     margin: 0;
     align-self: center;
+    justify-content: space-between;
+    margin-top: 7px;
   }
 }
+
 .card-additionally__button {
+  font-family: @Oswald;
   width: 282px;
   padding-top: 10px;
   padding-bottom: 10px;
+
   @media (min-width: @tablet-width) {
     width: 632px;
     grid-column: 1/-1;
     grid-row: 3/4;
   }
+
   @media (min-width: @desktop-width) {
     width: 244px;
     grid-column: 5/6;

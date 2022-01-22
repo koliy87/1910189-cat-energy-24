@@ -1,23 +1,28 @@
 .main-nav {
   font-size: 20px;
   line-height: 20px;
-  display: flex;
+  display: inherit;
+  padding-top: 4px;
 }
+
 .main-nav__wrapper {
   position: absolute;
   left: 0;
   bottom: -197px;
   background-color: @white;
   z-index: 1;
+
   @media (min-width: @tablet-width) {
     visibility: visible;
     background-color: transparent;
     position: inherit;
   }
+
   @media (min-width: @desktop-width) {
     visibility: visible;
   }
 }
+
 .main-nav__list {
   display: flex;
   flex-direction: column;
@@ -27,63 +32,76 @@
   padding: 0;
   margin: 0;
   width: 320px;
+
   @media (min-width: @tablet-width) {
     flex-direction: row;
     width: inherit;
   }
 }
+
 .main-nav__item {
   width: auto;
   padding: 22px 20px 24px;
   text-align: center;
-  border-top: 1px solid #E6E6E6;
+  border-top: 1px solid #e6e6e6;
   cursor: pointer;
   position: relative;
+
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
     border: none;
-    padding: 0 13px;
+    padding: 0 18px;
+
     :hover {
       opacity: 0.6;
     }
+
     :active {
       opacity: 0.3;
     }
+
     &:last-child {
       padding-right: 0;
+
       &::after {
         right: 0;
       }
     }
+
     &--current::after {
       content: "";
       position: absolute;
-      right: 13px;
-      left: 13px;
+      right: 17px;
+      left: 17px;
       bottom: -10px;
       height: 2px;
       background-color: @green;
     }
+
     &--current-inner::after {
       content: "";
       position: absolute;
       right: 13px;
       left: 13px;
-      bottom: -10px;
+      bottom: -7px;
       height: 2px;
       background-color: @green;
     }
   }
+
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
+
     &--current::after {
       background-color: @white;
+      bottom: -7px;
     }
   }
 }
+
 .main-nav__link {
   display: block;
   text-decoration: none;
@@ -92,44 +110,58 @@
   padding: 0;
   margin: 0;
   position: relative;
+
   @media (min-width: @desktop-width) {
     color: @white;
   }
+
   &--inner {
     color: @black;
   }
 }
+
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .main-nav__wrapper {
     visibility: hidden;
   }
+
   .main-nav--open .main-nav__wrapper {
     visibility: visible;
   }
 }
+
 .main-nav--closed .main-nav__toggle {
   width: 24px;
   height: 24px;
-  background-image:  url("../img/nav-button.svg");
+  background-image: url("../img/nav-button.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: @white;
   border: none;
   cursor: pointer;
+
   @media (min-width: @tablet-width) {
     visibility: hidden;
   }
 }
+
 .main-nav--opened .main-nav__toggle {
   width: 24px;
   height: 24px;
-  background-image:  url("../img/closed.svg");
+  background-image: url("../img/closed.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: @white;
   border: none;
   cursor: pointer;
+
   @media (min-width: @tablet-width) {
     visibility: hidden;
+  }
+}
+
+.main-nav__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }

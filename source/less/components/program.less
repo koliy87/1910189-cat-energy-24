@@ -1,6 +1,7 @@
 .program {
-  padding: 28.24px 0 25.4px;
+  padding: 28px 0 25px;
   position: relative;
+
   &::before {
     position: absolute;
     content: "";
@@ -8,36 +9,57 @@
     right: -20px;
     bottom: 0;
     height: 1px;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
   }
+
   @media (min-width: @tablet-width) {
-    border: 1px solid #E7E7E7;
+    border: 1px solid #e7e7e7;
     padding: 30px;
     flex-grow: 1;
+    padding-bottom: 24px;
+
     &::before {
       display: none;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 35px;
+  }
 }
+
 .program__list {
   margin: 0;
   list-style-type: none;
   padding-inline-start: 0;
 }
+
 .program__item {
   margin-bottom: 25px;
+
   &:last-child {
     margin: 0;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
+  }
 }
+
 .program__control {
   position: relative;
   padding-left: 45px;
   cursor: pointer;
+
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 58px;
+  }
 }
+
 .program__control-mark {
   position: absolute;
   width: 30px;
@@ -45,12 +67,20 @@
   background-color: @white;
   left: 0;
   top: -5px;
-  border: 1px solid #CDCDCD;
+  border: 1px solid #cdcdcd;
   border-radius: 20px;
+
   &:hover {
-    border: 1px solid #BABABA;
+    border: 1px solid #bababa;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 35px;
+    height: 35px;
+    top: -12px;
   }
 }
+
 .program__control-input[type="radio"]:checked + .program__control-mark::before {
   position: absolute;
   content: "";
@@ -60,10 +90,18 @@
   top: 8.28px;
   left: 8.28px;
   border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    width: 17px;
+    height: 17px;
+    border-radius: 10px;
+  }
 }
+
 .program__control-label {
   text-transform: uppercase;
   color: #222222;
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;

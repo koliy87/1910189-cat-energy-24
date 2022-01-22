@@ -5,24 +5,29 @@
   line-height: 18px;
   color: @black;
 }
+
 .page-body__wrapper {
   background-color: @white;
-  @media (min-width: @desktop-width){
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), url("../img/background-desktop.jpg");
+
+  @media (min-width: @desktop-width) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background-desktop.jpg");
     background-size: 50% 694px;
     background-position-x: right;
     background-position-y: top;
     background-repeat: no-repeat;
+
     @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), url("../img/background-desktop@2x.jpg");
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background-desktop@2x.jpg");
     }
   }
+
   &--inner {
     @media (min-width: @tablet-width) {
       background-image: none;
     }
   }
 }
+
 .button {
   color: @white;
   background-color: @green;
@@ -33,13 +38,16 @@
   padding-top: 7px;
   border: none;
   text-transform: uppercase;
+
   &:hover {
-    background-color: #5EAA2F;
+    background-color: #5eaa2f;
   }
+
   &:active {
-     color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.3);
   }
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -52,4 +60,3 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
