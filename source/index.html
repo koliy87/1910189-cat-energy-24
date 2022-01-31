@@ -10,6 +10,8 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page-body">
@@ -22,10 +24,10 @@
           <img src="img/logo-litle.svg" alt="Логотип Cat Energy">
         </picture>
       </a>
-      <a class="page-header__logo--name">
+      <a class="page-header__logo page-header__logo--name">
         <img src="img/logo-name.svg" width="101" height="18" alt="Название Cat Energy">
       </a>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -147,7 +149,9 @@
             <div class="slider__range range">
               <p class="range__text">Было</p>
               <div class="range__scale">
-                <button class="range__toggle" type="button"></button>
+                <button class="range__toggle" type="button">
+                  <span class="visually-hidden">Бегунок</span>
+                </button>
               </div>
               <p class="range__text">Стало</p>
             </div>
@@ -195,7 +199,7 @@
               </li>
               <li class="social__item">
                 <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-                  <svg class="social__icon--facebook" width="13" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="social__icon social__icon--facebook" width="13" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use href="img/sprite.svg#facebook"></use>
                   </svg>
                   <span class="visually-hidden">Мы в Фейсбук</span>
