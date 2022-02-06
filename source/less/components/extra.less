@@ -6,14 +6,21 @@
   position: relative;
   margin-bottom: 37px;
 
+  span {
+    background-color: @white;
+    padding-right: 14px;
+    position: relative;
+  }
+
   &::before {
     position: absolute;
     content: "";
-    width: 136px;
+    width: 100vw;
     height: 2px;
-    right: -20px;
+    left: 50%;
     background-color: @green;
-    top: 14px;
+    top: 15px;
+    z-index: 0;
   }
 
   @media (min-width: @tablet-width) {
@@ -21,33 +28,23 @@
     line-height: 36px;
     margin-bottom: 61px;
 
-    &::before {
-      width: 446px;
-      right: -65px;
-      top: 22px;
+    span {
+      padding-left: 39px;
+      padding-right: 42px;
+      margin-left: -39px;
     }
 
-    &::after {
-      position: absolute;
-      content: "";
-      width: 30px;
-      height: 2px;
-      left: -69px;
-      background-color: #68b738;
+    &::before {
+      transform: translateX(-50%);
       top: 22px;
     }
   }
 
   @media (min-width: @desktop-width) {
-
-    &::before {
-      width: 1078px;
-      right: -110px;
-    }
-
-    &::after {
-      width: 70px;
-      left: -110px;
+    span {
+      padding-left: 40px;
+      padding-right: 40px;
+      margin-left: -40px;
     }
   }
 }
@@ -83,7 +80,7 @@
 
   @media (min-width: @desktop-width) {
     column-gap: 0;
-    grid-template-columns: 220px 105px 188px 137px 127px 198px 149px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -106,22 +103,6 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
-
-    &--sugar {
-      grid-column: 1/2;
-    }
-
-    &--water {
-      grid-column: 3/4;
-    }
-
-    &--milk {
-      grid-column: 5/6;
-    }
-
-    &--vitamin {
-      grid-column: 7/8;
-    }
   }
 }
 

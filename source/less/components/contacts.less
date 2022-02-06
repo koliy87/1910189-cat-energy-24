@@ -1,3 +1,7 @@
+.contacts {
+  overflow: hidden;
+}
+
 .contacts__wrapper {
   .mobile;
   padding-bottom: 26px;
@@ -30,14 +34,21 @@
   position: relative;
   margin-bottom: 27px;
 
+  span {
+    background-color: @white;
+    padding-right: 14px;
+    position: relative;
+  }
+
   &::before {
     position: absolute;
     content: "";
-    width: 99px;
+    width: 100vw;
     height: 2px;
-    right: -20px;
+    left: 50%;
     background-color: @green;
     top: 15px;
+    z-index: 0;
   }
 
   @media (min-width: @tablet-width) {
@@ -45,34 +56,29 @@
     line-height: 36px;
     margin-bottom: 69px;
 
-    &::before {
-      width: 145px;
-      right: -65px;
-      top: 22px;
+    span {
+      padding-left: 39px;
+      padding-right: 42px;
+      margin-left: -39px;
     }
 
-    &::after {
-      position: absolute;
-      content: "";
-      width: 30px;
-      height: 2px;
-      left: -69px;
-      background-color: @green;
+    &::before {
       top: 22px;
+      transform: translateX(-50%);
     }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 64px;
 
-    &::before {
-      width: 778px;
-      right: -110px;
+    span {
+      padding-left: 40px;
+      padding-right: 40px;
+      margin-left: -40px;
     }
 
-    &::after {
-      width: 70px;
-      left: -110px;
+    &::before {
+
     }
   }
 }

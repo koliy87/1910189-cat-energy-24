@@ -6,14 +6,21 @@
   position: relative;
   margin-bottom: 37.73px;
 
+  span {
+    background-color: @white;
+    padding-right: 14px;
+    position: relative;
+  }
+
   &::before {
     position: absolute;
     content: "";
-    width: 158px;
+    width: 100vw;
     height: 2px;
-    right: -20px;
+    left: 50%;
     background-color: @green;
-    top: 14px;
+    top: 15px;
+    z-index: 0;
   }
 
   @media (min-width: @tablet-width) {
@@ -21,33 +28,23 @@
     line-height: 36px;
     margin-bottom: 76px;
 
-    &::before {
-      width: 478px;
-      right: -65px;
-      top: 22px;
+    span {
+      padding-left: 39px;
+      padding-right: 42px;
+      margin-left: -39px;
     }
 
-    &::after {
-      position: absolute;
-      content: "";
-      width: 30px;
-      height: 2px;
-      left: -69px;
-      background-color: #68b738;
+    &::before {
+      transform: translateX(-50%);
       top: 22px;
     }
   }
 
   @media (min-width: @desktop-width) {
-
-    &::before {
-      width: 1108px;
-      right: -110px;
-    }
-
-    &::after {
-      width: 70px;
-      left: -110px;
+    span {
+      padding-left: 40px;
+      padding-right: 40px;
+      margin-left: -40px;
     }
   }
 }
@@ -66,6 +63,7 @@
   border: 1px solid #e7e7e7;
   border-radius: 0;
   cursor: pointer;
+  resize: none;
 
   @media (min-width: @tablet-width) {
     min-height: 174px;

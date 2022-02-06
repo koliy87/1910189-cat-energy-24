@@ -147,13 +147,13 @@
               </li>
             </ul>
             <div class="slider__range range">
-              <p class="range__text">Было</p>
+              <p class="range__text" tabindex="0">Было</p>
               <div class="range__scale">
                 <button class="range__toggle" type="button">
                   <span class="visually-hidden">Бегунок</span>
                 </button>
               </div>
-              <p class="range__text">Стало</p>
+              <p class="range__text" tabindex="0">Стало</p>
             </div>
           </section>
         </div>
@@ -175,7 +175,7 @@
       <div class="footer-inner">
         <div class="footer-inner__wrapper">
           <div class="footer-inner__logo">
-            <a class="footer-inner__logo-name">
+            <a class="footer-inner__logo-name" href="index.html">
               <img src="img/logo-name.svg" width="128" height="24" alt="Название Cat Energy">
             </a>
           </div>
@@ -183,7 +183,7 @@
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-                  <svg class="social__icon" width="23" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="social__icon social__icon--vk" width="23" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use href="img/sprite.svg#vk"></use>
                   </svg>
                   <span class="visually-hidden">Мы в Вконтакте</span>
@@ -191,7 +191,7 @@
               </li>
               <li class="social__item">
                 <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-                  <svg class="social__icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="social__icon social__icon--instagram" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use href="img/sprite.svg#instagram"></use>
                   </svg>
                   <span class="visually-hidden">Мы в Интсаграм</span>
@@ -211,8 +211,7 @@
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             <a href="https://htmlacademy.ru/intensive/adaptive">
               <svg class="copyright__logo" width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z" />
+                <use href="img/sprite.svg#html-academy"></use>
               </svg>
             </a>
           </div>
@@ -226,6 +225,8 @@
   var navToggle = document.querySelector('.main-nav__toggle');
 
   navMain.classList.remove('main-nav--nojs');
+  navMain.classList.remove('main-nav--opened');
+  navMain.classList.add('main-nav--closed');
 
   navToggle.addEventListener('click', function () {
     if (navMain.classList.contains('main-nav--closed')) {
